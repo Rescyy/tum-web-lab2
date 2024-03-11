@@ -421,3 +421,71 @@ section {
     background-color: #ababab;
     margin-top: 0 !important;
 }
+
+#gigachad-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    > img {
+        width: 8rem;
+        height: 8rem;
+        @media (max-width: 1024px) {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+}
+
+#gigachad {
+    transition: transform 0.3s ease;
+    animation: tilt 3s ease-in-out infinite;
+}
+
+
+#gigachad:hover + #gigachad-message {
+    display: block;
+}
+
+#gigachad-message {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+@keyframes tilt {
+    0%, 100% {
+        transform: scaleX(1);
+        /* transform: rotate(0deg); */
+    }
+    25% {
+        transform: scaleX(2);
+        /* transform: rotate(-10deg); */
+    }
+    50% {
+        transform: scaleX(1);
+    }
+}
+
+
+footer {
+    @media (max-width: 769px) {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+    background-color: black;
+    display: none;
+    > a {
+        color: white;
+        background-color: black;
+        text-decoration: none;
+    }
+}
