@@ -439,9 +439,38 @@ section {
 
 #gigachad {
     transition: transform 0.3s ease;
-    animation: tilt 3s ease-in-out infinite;
+    animation: pop-up 5s ease-in forwards, tilt 3s ease-in-out infinite;
 }
 
+
+@keyframes pop-up {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    99% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes tilt {
+    0%, 100% {
+        transform: scaleX(1);
+        /* transform: rotate(0deg); */
+    }
+    25% {
+        transform: scaleX(2);
+        /* transform: rotate(-10deg); */
+    }
+    50% {
+        transform: scaleX(1);
+    }
+}
 
 #gigachad:hover + #gigachad-message {
     display: block;
@@ -457,20 +486,6 @@ section {
     padding: 10px;
     border-radius: 4px;
     white-space: nowrap;
-}
-
-@keyframes tilt {
-    0%, 100% {
-        transform: scaleX(1);
-        /* transform: rotate(0deg); */
-    }
-    25% {
-        transform: scaleX(2);
-        /* transform: rotate(-10deg); */
-    }
-    50% {
-        transform: scaleX(1);
-    }
 }
 
 
