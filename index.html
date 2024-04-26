@@ -7,38 +7,46 @@
     <!-- CHANGE THESE VALUES -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
   </head>
-  <body>
-  <main>
-    <section class="hero-comp">
-      <h2 class="buy">
+  <body class="m-0 p-0 bg-white font-sans">
+  <main class="min-w-full overflow-hidden sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl">
+    <section class="pr-4 mt-16 width-1/1 flex mt-0 flex-col gap-8">
+      <h2 class="flex flex-col items-center justify-center lg:order-2">
         <div class="buy-membership">
-          <div>BUY OUR <br />MEMBERSHIP!</div>
+          <div class="relative font-bold lg:text-2xl xl:text-3xl 2xl:text-6xl">BUY OUR <br />MEMBERSHIP!</div>
           <div>
-            <button><a href="#buy_now">BUY HAPPINESS</a></button>
+            <button class="relative w-fit px-1 py-5 text-base font-bold text-white bg-black lg:px-2 py-10 text-2xl xl:px-2 py-10 text-3xl"><a href="#buy_now">BUY HAPPINESS</a></button>
           </div>
         </div>
       </h2>
       <img
-              class="happy"
+              class="rounded-full w-full max-w-48 order-1 self-center lg:max-w-72 order-2 xl:max-w-96"
               src="assets/happyheroimage.png"
       />
     </section>
-    <section class="girls">
-      <div class="learn">Learn how <br />to meet girls!</div>
-      <div class="girls-text">
-        <div class="bullet">
-          <div class="circle"></div>
-          <h3>Tested Guide</h3>
-          <span>
+    <section class="bg-neutral-300 flex flex-col justify-center items-center text-2xl gap-4 lg:flex-row gap-8">
+      <div class="text-lg font-bold text-center md:text-2xl lg:text-3xl">Learn how <br />to meet girls!</div>
+      <div class="justify-center flex-col gap-8 flex-wrap lg:flex-row gap-20">
+        <div class="flex flex-col text-balance justify-center items-center p-8">
+          <div class="h-24 w-24 rounded-full bg-neutral-700"></div>
+          <h3 class="font-bold text-base md:text-2xl lg:text-3xl">Tested Guide</h3>
+          <span class="text-center text-xs md:text-base lg:text-lg xl:text-2xl">
             This guide has been field tested by several men like you.
             Guaranteed success with any woman you want.
           </span>
         </div>
-        <div class="bullet">
-          <div class="circle"></div>
-          <h3>Step-by-Step</h3>
-          <span>
+        <div class="flex flex-col text-balance justify-center items-center p-8">
+          <div class="h-24 w-24 rounded-full bg-neutral-700"></div>
+          <h3 class="font-bold text-base md:text-2xl lg:text-3xl">Step-by-Step</h3>
+          <span class="text-center text-xs md:text-base lg:text-lg xl:text-2xl">
             You will get a step by step guide of what to do to get the girl of
             your dreams.
           </span>
